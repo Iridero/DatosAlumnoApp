@@ -32,30 +32,30 @@ namespace DatosAlumnoApp
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.grpNuevoAlumno = new System.Windows.Forms.GroupBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.txtDomicilio = new System.Windows.Forms.TextBox();
-            this.txtNombrePadre = new System.Windows.Forms.TextBox();
-            this.txtTelPadre = new System.Windows.Forms.TextBox();
-            this.txtNombreMadre = new System.Windows.Forms.TextBox();
-            this.txtTelMadre = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtTelMadre = new System.Windows.Forms.TextBox();
+            this.txtNombreMadre = new System.Windows.Forms.TextBox();
+            this.txtTelPadre = new System.Windows.Forms.TextBox();
+            this.txtNombrePadre = new System.Windows.Forms.TextBox();
+            this.txtDomicilio = new System.Windows.Forms.TextBox();
+            this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbl = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblDomicilio = new System.Windows.Forms.Label();
-            this.lblNombrePadre = new System.Windows.Forms.Label();
-            this.lblTelPadre = new System.Windows.Forms.Label();
-            this.lblNombreMadre = new System.Windows.Forms.Label();
             this.lblTelMadre = new System.Windows.Forms.Label();
+            this.lblNombreMadre = new System.Windows.Forms.Label();
+            this.lblTelPadre = new System.Windows.Forms.Label();
+            this.lblNombrePadre = new System.Windows.Forms.Label();
+            this.lblDomicilio = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.grpNuevoAlumno.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,7 @@ namespace DatosAlumnoApp
             this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // grpNuevoAlumno
             // 
@@ -105,64 +106,68 @@ namespace DatosAlumnoApp
             this.grpNuevoAlumno.TabStop = false;
             this.grpNuevoAlumno.Text = "Nuevo Alumno";
             // 
-            // txtNombre
+            // label7
             // 
-            this.txtNombre.Location = new System.Drawing.Point(168, 26);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(311, 27);
-            this.txtNombre.TabIndex = 0;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 231);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Tel. de la madre";
             // 
-            // dtpNacimiento
+            // label6
             // 
-            this.dtpNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNacimiento.Location = new System.Drawing.Point(168, 59);
-            this.dtpNacimiento.Name = "dtpNacimiento";
-            this.dtpNacimiento.Size = new System.Drawing.Size(311, 27);
-            this.dtpNacimiento.TabIndex = 1;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 194);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(148, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Nombre de la madre";
             // 
-            // txtDomicilio
+            // label5
             // 
-            this.txtDomicilio.Location = new System.Drawing.Point(168, 92);
-            this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(311, 27);
-            this.txtDomicilio.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Tel. del padre";
             // 
-            // txtNombrePadre
+            // label4
             // 
-            this.txtNombrePadre.Location = new System.Drawing.Point(168, 125);
-            this.txtNombrePadre.Name = "txtNombrePadre";
-            this.txtNombrePadre.Size = new System.Drawing.Size(311, 27);
-            this.txtNombrePadre.TabIndex = 3;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Nombre del padre";
             // 
-            // txtTelPadre
+            // label3
             // 
-            this.txtTelPadre.Location = new System.Drawing.Point(168, 158);
-            this.txtTelPadre.Name = "txtTelPadre";
-            this.txtTelPadre.Size = new System.Drawing.Size(311, 27);
-            this.txtTelPadre.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Domicilio";
             // 
-            // txtNombreMadre
+            // label2
             // 
-            this.txtNombreMadre.Location = new System.Drawing.Point(168, 191);
-            this.txtNombreMadre.Name = "txtNombreMadre";
-            this.txtNombreMadre.Size = new System.Drawing.Size(311, 27);
-            this.txtNombreMadre.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Fecha de nacimiento";
             // 
-            // txtTelMadre
+            // label1
             // 
-            this.txtTelMadre.Location = new System.Drawing.Point(168, 224);
-            this.txtTelMadre.Name = "txtTelMadre";
-            this.txtTelMadre.Size = new System.Drawing.Size(311, 27);
-            this.txtTelMadre.TabIndex = 6;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(385, 278);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Nombre";
             // 
             // btnGuardar
             // 
@@ -174,68 +179,64 @@ namespace DatosAlumnoApp
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // label1
+            // btnCancelar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Nombre";
+            this.btnCancelar.Location = new System.Drawing.Point(385, 278);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // txtTelMadre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Fecha de nacimiento";
+            this.txtTelMadre.Location = new System.Drawing.Point(168, 224);
+            this.txtTelMadre.Name = "txtTelMadre";
+            this.txtTelMadre.Size = new System.Drawing.Size(311, 27);
+            this.txtTelMadre.TabIndex = 6;
             // 
-            // label3
+            // txtNombreMadre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 20);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Domicilio";
+            this.txtNombreMadre.Location = new System.Drawing.Point(168, 191);
+            this.txtNombreMadre.Name = "txtNombreMadre";
+            this.txtNombreMadre.Size = new System.Drawing.Size(311, 27);
+            this.txtNombreMadre.TabIndex = 5;
             // 
-            // label4
+            // txtTelPadre
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Nombre del padre";
+            this.txtTelPadre.Location = new System.Drawing.Point(168, 158);
+            this.txtTelPadre.Name = "txtTelPadre";
+            this.txtTelPadre.Size = new System.Drawing.Size(311, 27);
+            this.txtTelPadre.TabIndex = 4;
             // 
-            // label5
+            // txtNombrePadre
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Tel. del padre";
+            this.txtNombrePadre.Location = new System.Drawing.Point(168, 125);
+            this.txtNombrePadre.Name = "txtNombrePadre";
+            this.txtNombrePadre.Size = new System.Drawing.Size(311, 27);
+            this.txtNombrePadre.TabIndex = 3;
             // 
-            // label6
+            // txtDomicilio
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 194);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 20);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Nombre de la madre";
+            this.txtDomicilio.Location = new System.Drawing.Point(168, 92);
+            this.txtDomicilio.Name = "txtDomicilio";
+            this.txtDomicilio.Size = new System.Drawing.Size(311, 27);
+            this.txtDomicilio.TabIndex = 2;
             // 
-            // label7
+            // dtpNacimiento
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 231);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Tel. de la madre";
+            this.dtpNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNacimiento.Location = new System.Drawing.Point(168, 59);
+            this.dtpNacimiento.Name = "dtpNacimiento";
+            this.dtpNacimiento.Size = new System.Drawing.Size(311, 27);
+            this.dtpNacimiento.TabIndex = 1;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(168, 26);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(311, 27);
+            this.txtNombre.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -245,7 +246,7 @@ namespace DatosAlumnoApp
             this.groupBox2.Controls.Add(this.lblNombrePadre);
             this.groupBox2.Controls.Add(this.lblDomicilio);
             this.groupBox2.Controls.Add(this.lblFecha);
-            this.groupBox2.Controls.Add(this.lbl);
+            this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Location = new System.Drawing.Point(531, 86);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(514, 307);
@@ -254,45 +255,13 @@ namespace DatosAlumnoApp
             this.groupBox2.Text = "groupBox2";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // lbl
+            // lblTelMadre
             // 
-            this.lbl.Location = new System.Drawing.Point(11, 29);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(482, 25);
-            this.lbl.TabIndex = 0;
-            this.lbl.Text = " ";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.Location = new System.Drawing.Point(11, 64);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(482, 25);
-            this.lblFecha.TabIndex = 1;
-            this.lblFecha.Text = " ";
-            // 
-            // lblDomicilio
-            // 
-            this.lblDomicilio.Location = new System.Drawing.Point(11, 95);
-            this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Size = new System.Drawing.Size(482, 25);
-            this.lblDomicilio.TabIndex = 2;
-            this.lblDomicilio.Text = " ";
-            // 
-            // lblNombrePadre
-            // 
-            this.lblNombrePadre.Location = new System.Drawing.Point(11, 128);
-            this.lblNombrePadre.Name = "lblNombrePadre";
-            this.lblNombrePadre.Size = new System.Drawing.Size(482, 25);
-            this.lblNombrePadre.TabIndex = 3;
-            this.lblNombrePadre.Text = " ";
-            // 
-            // lblTelPadre
-            // 
-            this.lblTelPadre.Location = new System.Drawing.Point(11, 158);
-            this.lblTelPadre.Name = "lblTelPadre";
-            this.lblTelPadre.Size = new System.Drawing.Size(482, 25);
-            this.lblTelPadre.TabIndex = 4;
-            this.lblTelPadre.Text = " ";
+            this.lblTelMadre.Location = new System.Drawing.Point(11, 231);
+            this.lblTelMadre.Name = "lblTelMadre";
+            this.lblTelMadre.Size = new System.Drawing.Size(482, 25);
+            this.lblTelMadre.TabIndex = 6;
+            this.lblTelMadre.Text = " ";
             // 
             // lblNombreMadre
             // 
@@ -302,13 +271,45 @@ namespace DatosAlumnoApp
             this.lblNombreMadre.TabIndex = 5;
             this.lblNombreMadre.Text = " ";
             // 
-            // lblTelMadre
+            // lblTelPadre
             // 
-            this.lblTelMadre.Location = new System.Drawing.Point(11, 231);
-            this.lblTelMadre.Name = "lblTelMadre";
-            this.lblTelMadre.Size = new System.Drawing.Size(482, 25);
-            this.lblTelMadre.TabIndex = 6;
-            this.lblTelMadre.Text = " ";
+            this.lblTelPadre.Location = new System.Drawing.Point(11, 158);
+            this.lblTelPadre.Name = "lblTelPadre";
+            this.lblTelPadre.Size = new System.Drawing.Size(482, 25);
+            this.lblTelPadre.TabIndex = 4;
+            this.lblTelPadre.Text = " ";
+            // 
+            // lblNombrePadre
+            // 
+            this.lblNombrePadre.Location = new System.Drawing.Point(11, 128);
+            this.lblNombrePadre.Name = "lblNombrePadre";
+            this.lblNombrePadre.Size = new System.Drawing.Size(482, 25);
+            this.lblNombrePadre.TabIndex = 3;
+            this.lblNombrePadre.Text = " ";
+            // 
+            // lblDomicilio
+            // 
+            this.lblDomicilio.Location = new System.Drawing.Point(11, 95);
+            this.lblDomicilio.Name = "lblDomicilio";
+            this.lblDomicilio.Size = new System.Drawing.Size(482, 25);
+            this.lblDomicilio.TabIndex = 2;
+            this.lblDomicilio.Text = " ";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Location = new System.Drawing.Point(11, 64);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(482, 25);
+            this.lblFecha.TabIndex = 1;
+            this.lblFecha.Text = " ";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.Location = new System.Drawing.Point(11, 29);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(482, 25);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = " ";
             // 
             // Form1
             // 
@@ -356,7 +357,7 @@ namespace DatosAlumnoApp
         private System.Windows.Forms.Label lblNombrePadre;
         private System.Windows.Forms.Label lblDomicilio;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label lblNombre;
     }
 }
 

@@ -42,6 +42,7 @@ namespace DatosAlumnoApp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // Crear el objeto a guardar
             Alumno nuevo = new Alumno();
             nuevo.Padre = new Persona();
             nuevo.Madre = new Persona();
@@ -53,12 +54,49 @@ namespace DatosAlumnoApp
             nuevo.Madre.Nombre = txtNombreMadre.Text;
             nuevo.Madre.Telefono = txtTelMadre.Text;
 
+            //Instanciar el serializador
             Serializador<Alumno> ser = new Serializador<Alumno>();
+
+            //Esstablecer la ruta
             string ruta = Path.Combine
-                (Environment.CurrentDirectory,"alumnos", nuevo.Nombre + ".dat");
-            ser.Guardar(ruta, nuevo);
+                (Environment.CurrentDirectory, "alumnos", nuevo.Nombre + ".dat");
+            ///Guardar
+             ser.Guardar(ruta, nuevo);
             LimpiarControles();
             grpNuevoAlumno.Enabled = false;
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog
+            {
+                Filter = "Archivos de datos|*.dat",
+                InitialDirectory = Path.Combine(
+                    Environment.CurrentDirectory,
+                    "alumnos"
+                    )
+            };
+            if (dialog.ShowDialog()==DialogResult.OK)
+            {
+                Serializador<Alumno> ser = new Serializador<Alumno>();
+                try
+                {
+                    Alumno a = ser.Cargar(dialog.FileName);
+                    lblNombre.Text = a.Nombre;
+                    lblDomicilio.Text = a.Domicilio;
+                    lblFecha.Text = a.FechaNacimiento.ToShortDateString();
+                    lblNombrePadre.Text = a.Padre.Nombre;
+                    lblTelPadre.Text = a.Padre.Telefono;
+                    lblNombreMadre.Text = a.Madre.Nombre;
+                    lblTelMadre.Text = a.Madre.Telefono;
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            
+            
         }
     }
 }

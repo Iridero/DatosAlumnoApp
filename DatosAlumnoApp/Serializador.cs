@@ -10,6 +10,11 @@ namespace DatosAlumnoApp
 {
     public class Serializador<T>
     {
+        /// <summary>
+        /// Guardar el estado de un objeto de tipo T en un archivo
+        /// </summary>
+        /// <param name="ruta">Ruta del archivo</param>
+        /// <param name="elemento">Objeto a guardar</param>
         public void Guardar(string ruta, T elemento)
         {
             FileStream fs = new FileStream(ruta, FileMode.Create);
@@ -25,6 +30,12 @@ namespace DatosAlumnoApp
                 fs.Close();
             }
         }
+
+        /// <summary>
+        /// Carga un objeto de tipo T desde un archivo.
+        /// </summary>
+        /// <param name="ruta">Ruta del archivo</param>
+        /// <returns></returns>
         public T Cargar(string ruta)
         {
             FileStream fs = new FileStream(ruta, FileMode.Open);
